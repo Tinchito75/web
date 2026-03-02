@@ -81,6 +81,7 @@ body {
         "hero brand brand pitch"
         "auto cta cta scale"
         "roi cta cta integ"
+        "faq faq faq faq"
         "term term term term";
     gap: 1.25rem;
     max-width: 1300px;
@@ -150,6 +151,10 @@ body {
     padding: 1rem;
     min-height: 80px;
     justify-content: center;
+}
+
+.faq-card {
+    grid-area: faq;
 }
 
 /* Card Contents */
@@ -296,7 +301,6 @@ body {
 
 /* FAQ */
 .faq-card {
-    grid-column: span 4;
     padding: 2.5rem !important;
 }
 
@@ -583,21 +587,65 @@ body.modal-open .grid-background {
 @media (max-width: 1200px) {
     .bento-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "brand brand" "hero pitch" "auto scale" "cta cta" "roi integ" "term term";
+        grid-template-areas:
+            "brand brand"
+            "hero pitch"
+            "auto scale"
+            "cta cta"
+            "roi integ"
+            "faq faq"
+            "term term";
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .bento-container {
         grid-template-columns: 1fr;
-        grid-template-areas: "brand" "hero" "pitch" "cta" "auto" "scale" "integ" "roi" "term";
+        grid-template-areas:
+            "brand"
+            "hero"
+            "pitch"
+            "cta"
+            "auto"
+            "scale"
+            "integ"
+            "roi"
+            "faq"
+            "term";
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .bento-item {
+        padding: 1.5rem;
     }
 
     .title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .stat {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .modal-card {
+        padding: 1.5rem;
+        width: 95%;
+        max-height: 90vh;
+    }
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.stat {
+    font-size: 2rem;
+}
 }
