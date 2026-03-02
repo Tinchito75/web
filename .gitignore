@@ -1,0 +1,11 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Antigravity artifacts (local only)
+.gemini/
+brain/
+tmp/
+*.webp
+*.png
+!grid-bg.png
